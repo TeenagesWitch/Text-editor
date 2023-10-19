@@ -59,7 +59,7 @@ export default function App() {
           p={4}
           mb={1}
           overflow="auto">
-        <Heading as="h2" size="md" mb={4}> Search </Heading>
+        <Heading as="h2" size="md" mb={4}> Find </Heading>
         <HStack mb={4}>
           <Input
             placeholder="Search"
@@ -67,7 +67,7 @@ export default function App() {
             onChange={(e) => setNewHighlight(e.target.value)}
             _focus={{ bgColor: "white" }}
             />
-          <Button width="20vw" bgColor="blue.500" textColor="white" _hover={{ bgColor: "blue.700", textColor: "white" }} onClick={handleHighlight}>Find</Button>
+          <Button width="20vw" bgColor="blue.500" textColor="white" _hover={{ bgColor: "blue.700", textColor: "white" }} onClick={handleHighlight}>Search ...</Button>
         </HStack>
         </Box>
         <Box 
