@@ -43,8 +43,9 @@ export default function App() {
   };
 
   const handleHighlight = () => {
-    setHighlight(newHighlight);
-  }
+    const foundString = findString(newHighlight, value);
+    setHighlight(foundString);
+  }  
 
   return (
     <>
@@ -62,12 +63,14 @@ export default function App() {
         <Heading as="h2" size="md" mb={4}> Find </Heading>
         <HStack mb={4}>
           <Input
-            placeholder="Search"
+            placeholder="Search ..."
             value={newHighlight}
             onChange={(e) => setNewHighlight(e.target.value)}
             _focus={{ bgColor: "white" }}
             />
-          <Button width="20vw" bgColor="blue.500" textColor="white" _hover={{ bgColor: "blue.700", textColor: "white" }} onClick={handleHighlight}>Search ...</Button>
+          <HStack>
+            <Button width="20vw" bgColor="blue.500" textColor="white" _hover={{ bgColor: "blue.700", textColor: "white" }} onClick={handleHighlight}>Search</Button>
+          </HStack>
         </HStack>
         </Box>
         <Box 

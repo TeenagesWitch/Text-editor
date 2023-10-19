@@ -17,7 +17,7 @@ export const replaceString = (from, to, sentence) => {
 };
 
 export const findString = (search, sentence) => {
-  if (sentence.includes(search)) {
+  if (sentence.toLowerCase().includes(search.toLowerCase())) {
     return search;
   }
   return "";
