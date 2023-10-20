@@ -105,6 +105,7 @@ export default function App() {
         borderColor="gray.300"
         borderRadius="md"
         p={4}
+        pl={9}
         height="80vh"
         mb={4}
         resize="vertical"
